@@ -1,0 +1,26 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "Storage\\": "storage/",
+            "App\\": "app/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/",
+            "App\\Requests\\": "app/requests/",
+            "App\\Services\\": "app/services/"
+        },
+        "files" : [
+            "app/functions/helpers.php",
+            "app/functions/errors.php",
+            "app/functions/validation.php"
+        ]
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.23"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    }
+}

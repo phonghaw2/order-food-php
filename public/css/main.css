@@ -1,0 +1,262 @@
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(""),url(//assets-cdn.kahoot.it/controller/v2/assets/montserrat-v25-latin-500.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(""),url(//assets-cdn.kahoot.it/controller/v2/assets/montserrat-v25-latin-700.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local(""),url(//assets-cdn.kahoot.it/controller/v2/assets/montserrat-v25-latin-900.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Noto Sans Arabic;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(""),url(//assets-cdn.kahoot.it/controller/v2/assets/noto-sans-arabic-v18-arabic-500.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Noto Sans Arabic;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(""),url(//assets-cdn.kahoot.it/controller/v2/assets/noto-sans-arabic-v18-arabic-700.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: Noto Sans Arabic;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local(""),url(//assets-cdn.kahoot.it/controller/v2/assets/noto-sans-arabic-v18-arabic-900.woff2) format("woff2")
+}
+
+:root {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    cursor: pointer;
+    background: #e6d347;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 12rem;
+}
+
+.brand {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  color: #000;
+}
+
+.brand:hover {
+  background: #b5a73c;
+}
+
+.brand span {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item.active {
+  background: #b5a73c;
+}
+
+.nav-item a {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item__icon {
+  position: relative;
+  font-size: 3.6vmin;
+  line-height: 3.6vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item__text {
+    font-weight: 700;
+    font-size: 2.4vmin;
+    line-height: 3.4vmin;
+    position: relative;
+    display: none;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.logout {
+  margin-left: 0.2rem;
+}
+
+.sidebar:hover .brand span {
+  display: inline;  
+}
+
+.sidebar:hover .nav-item {
+  justify-content: start;
+}
+
+.sidebar:hover .nav-item__text {
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+    flex: 1;
+    margin: 4rem;
+}
+
+.item-container {
+    padding: 5vw;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-restaurant-row {
+    display: flex;
+    width: 100%;
+    height: 68px;
+    position: relative;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    --tw-border-opacity: 1;
+    border-color: rgba(156,163,175,var(--tw-border-opacity));
+    border-style: dashed;
+    border-width: 2px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.duration-150 {
+    transition-duration: 150ms;
+}
+
+.hover\:duration-150:hover {
+    transition-duration: 150ms;
+}
+
+.hover\:scale-105:hover {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.food-image {
+    width: 32px;
+    height: 32px;
+}
+.food-image img{
+    width: 32px;
+    height: 32px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.food-name {
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+/* .food-price {
+   
+} */
+/* transition: opacity .75s ease; */
+
+
+.item-restaurant-row:hover .food-image img {
+    position: absolute;
+    left: -20px;
+    -webkit-transform: scale(2.85);
+    transform: scale(2.85,2.85);
+    -ms-transform: scale(2.85,2.85); /* IE 9 */
+    -webkit-transform: scale(2.85,2.85); 
+}
